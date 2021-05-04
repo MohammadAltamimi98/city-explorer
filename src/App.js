@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import axios from 'axios';
 import Info from './components/Info'
 import Map from './components/Map'
+import WeatherData from './components/WeatherData'
+
 
 
 export class App extends Component {
@@ -14,6 +16,7 @@ export class App extends Component {
       searchField: '',
       locationData:'',
       show:false,     // this flag controls when the image and the info show
+      weatherData:[],
     }
   }
 
@@ -25,13 +28,20 @@ export class App extends Component {
     e.preventDefault();
     const locationUrl=`https://us1.locationiq.com/v1/search.php?key=pk.0d3493300ad9bfd9d4a420db2f0cbe40&q=${this.state.searchField}&format=json`;
     const locationRequest=await axios.get(locationUrl);
+
+    const weatherUrl=`http://localhost:3003/weather`;
+    const weatherRequest= await axios.get(weatherUrl);
+    console.log(weatherRequest); // we found out that it is an array so we need to loop through the component that uses this info
+
     // console.log(locationRequest); /// to check if there's an error in the request
     this.setState({
       locationData:locationRequest.data[0],
-      show:true
+      show:true,
+      weatherData:weatherRequest.data,
+
     })
 
-    // console.log(this.state.locationData); // to check if its assigned to the new state.
+    console.log(this.state.weatherData); // to check if its assigned to the new state.
 
   }
 
@@ -54,7 +64,7 @@ export class App extends Component {
         <Form updateSearchField={this.updateSearchField} getLocation={this.getLocation} />
         {this.state.show&& <><Info name={this.state.locationData.display_name}/>
         <Map lat={this.state.locationData.lat} lon={this.state.locationData.lon} /> </>}
-        
+        <WeatherData weatherInfo={this.state.weatherData}/>
         <Footer />
       </div>
     )
