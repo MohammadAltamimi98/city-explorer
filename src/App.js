@@ -9,7 +9,7 @@ export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchField:''
+      searchField: ''
 
     }
   }
@@ -18,23 +18,24 @@ export class App extends Component {
 
 
 
-  getLocation =  (e) => {
+  getLocation = (e) => {
     e.preventDefault();
 
     console.log(this.state.searchField);
 
   }
 
-  updateSearchField = (e) => {this.setState({searchField: e.target.value});
-    console.log(e,e.target,e.target.value);
+  updateSearchField = (e) => {
+    this.setState({ searchField: e.target.value });
+    console.log(e.target.value);
   }
-  
+
   render() {
     return (
       <div>
         <Header />
         <br />
-        <Form updateSearchField={this.updateSearchField} getLocation={this.getLocation}/>
+        <Form updateSearchField={this.updateSearchField} getLocation={this.getLocation} />
         <Footer />
       </div>
     )
