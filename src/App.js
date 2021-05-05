@@ -26,10 +26,10 @@ export class App extends Component {
 
   getLocation = async (e) => {
     e.preventDefault();
-    const locationUrl=`https://us1.locationiq.com/v1/search.php?key=pk.0d3493300ad9bfd9d4a420db2f0cbe40&q=${this.state.searchField}&format=json`;
+    const locationUrl=`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_MAP_KEY}&q=${this.state.searchField}&format=json`;
     const locationRequest=await axios.get(locationUrl);
 
-    const weatherUrl=`http://localhost:3003/weather`;
+    const weatherUrl=`${process.env.REACT_APP_SERVER}/weather`;
     const weatherRequest= await axios.get(weatherUrl);
     console.log(weatherRequest); // we found out that it is an array so we need to loop through the component that uses this info
 
