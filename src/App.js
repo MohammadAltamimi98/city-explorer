@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
-import Header from './components/Header'
-import Form from './components/Form'
-import Footer from './components/Footer'
+import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Form from './components/Form';
+import Footer from './components/Footer';
 import axios from 'axios';
-import Info from './components/Info'
-import Map from './components/Map'
-import WeatherData from './components/WeatherData'
+import Info from './components/Info';
+import Map from './components/Map';
+import WeatherData from './components/WeatherData';
 
 
 

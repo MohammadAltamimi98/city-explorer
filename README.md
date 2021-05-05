@@ -41,6 +41,17 @@ Finish time: 7:00
 Actual time needed to complete: 4 hours: 45 mins
 
 
+#2 deploy static data
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 3:00
+
+Finish time:6:00
+
+Actual time needed to complete: 5 hours: 30 mins
+
+
 
 
 
