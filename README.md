@@ -1,4 +1,54 @@
-# Getting Started with Create React App
+City-Explorer
+Author: Mohammad Altamimi Version: 1.0.0
+
+
+Overview
+City Explorer is a website that can display the terrain of a city or an area. It is build so that you can travel to wherever you want and see whatever place you wish to visit right from your home at the comfort of your seat.
+
+
+Getting Started
+Create a new empty repo.
+follow these steps on trello after signing up : [Steps] (https://trello.com/b/Sc2iNmif)
+and then publish it on netlify
+
+Architecture
+In this application; I utilized React JS to build and structure the website. I used Axios to help me access data from the API. I used bootstrap to help me design the website.
+
+
+image
+
+
+Change Log
+02/05/2021 7:10 pm - Application now has a fully-functional map service. 03/05/2021 5:35 pm - Application now doesn't display map's placeholder on default + error message updated.
+
+
+Credit and Collaborations
+Trello: For providing steps to follow.
+LocationIQ: For providing the JSON data.
+
+
+
+Name of feature and time estimations:
+
+#1 Asynchronous code, and APIs
+create the GeoSearch - map Feature
+Estimate of time needed to complete: 4 hours
+
+Start time: 3:00
+
+Finish time: 7:00
+
+Actual time needed to complete: 4 hours: 45 mins
+
+
+
+
+
+
+
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +117,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
