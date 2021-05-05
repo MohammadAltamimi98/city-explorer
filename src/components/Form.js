@@ -19,9 +19,8 @@ export class Form extends React.Component {
                     </FormExplorer.Group>
 
 
-                    <Button variant="primary" type="submit">
-                        Explore
-  </Button>
+                    <Button variant="primary" type="submit"> Explore  </Button> <p>   </p>
+                    <Button  onClick={this.props.reloadPage}variant="primary" type="click"> Refresh  </Button>
                 </FormExplorer>
 
             </div>

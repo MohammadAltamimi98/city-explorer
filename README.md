@@ -1,7 +1,8 @@
 # City-Explorer App 
 
 <p>&nbsp;</p>
-- Author: Mohammad Altamimi Version: 1.0.0
+
+## - Author: Mohammad Altamimi Version: 1.0.0
 
 <p>&nbsp;</p>
 
