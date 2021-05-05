@@ -1,47 +1,107 @@
-City-Explorer
-Author: Mohammad Altamimi Version: 1.0.0
+# City-Explorer App 
 
+<p>&nbsp;</p>
 
-Overview
+## - Author: Mohammad Altamimi Version: 1.0.0
+
+<p>&nbsp;</p>
+
+## Overview
 City Explorer is a website that can display the terrain of a city or an area. It is build so that you can travel to wherever you want and see whatever place you wish to visit right from your home at the comfort of your seat.
 
+<p>&nbsp;</p>
 
-Getting Started
+## Getting Started
 Create a new empty repo.
 follow these steps on trello after signing up : [Steps] (https://trello.com/b/Sc2iNmif)
 and then publish it on netlify
+<p>&nbsp;</p>
 
-Architecture
+## Architecture
 In this application; I utilized React JS to build and structure the website. I used Axios to help me access data from the API. I used bootstrap to help me design the website.
 
 
-image
+<p>&nbsp;</p>
+
+![fourth image](./assets/diagram.png)
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+![third image](./assets/abeer.jpeg)
+
+<p>&nbsp;</p>
 
 
-Change Log
+<p>&nbsp;</p>
+
+![second image](./assets/location-iq.jpeg)
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+![first image](./assets/screenshot.jpeg)
+
+<p>&nbsp;</p>
+
+## Change Log
 02/05/2021 7:10 pm - Application now has a fully-functional map service. 03/05/2021 5:35 pm - Application now doesn't display map's placeholder on default + error message updated.
 
+<p>&nbsp;</p>
 
-Credit and Collaborations
+
+## Credit and Collaborations
 Trello: For providing steps to follow.
 LocationIQ: For providing the JSON data.
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+# Name of feature and time estimations:
+
+<p>&nbsp;</p>
 
 
-Name of feature and time estimations:
-
-#1 Asynchronous code, and APIs
+## 1. Asynchronous code, and APIs
 create the GeoSearch - map Feature
-Estimate of time needed to complete: 4 hours
 
-Start time: 3:00
+---
+- Estimate of time needed to complete: 4 hours
 
-Finish time: 7:00
+- Start time: 3:00
 
-Actual time needed to complete: 4 hours: 45 mins
+- Finish time: 7:00
+
+- Actual time needed to complete: 4 hours: 45 mins
+
+<p>&nbsp;</p>
 
 
+## 2. deploy static data
+---
 
+- Estimate of time needed to complete: 3 hours
+
+- Start time: 3:00
+
+- Finish time:6:00
+
+- Actual time needed to complete: 5 hours: 30 mins
+
+<p>&nbsp;</p>
+
+## 3. applying some styles with bootstrap
+---
+
+- Estimate of time needed to complete: 2 hours
+
+- Start time: 6:00
+
+- Finish time:8:00
+
+- Actual time needed to complete: 3 hours: 20 mins
 
 
 

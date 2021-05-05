@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
-import Header from './components/Header'
-import Form from './components/Form'
-import Footer from './components/Footer'
+import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Form from './components/Form';
+import Footer from './components/Footer';
 import axios from 'axios';
-import Info from './components/Info'
-import Map from './components/Map'
-import WeatherData from './components/WeatherData'
+import Info from './components/Info';
+import Map from './components/Map';
+import WeatherData from './components/WeatherData';
 
 
 
@@ -47,6 +48,9 @@ export class App extends Component {
 
 
 
+  
+
+  reloadPage = (event) => window.location.reload();
 
 
   updateSearchField = (e) => {
@@ -61,10 +65,10 @@ export class App extends Component {
       <div>
         <Header />
         <br />
-        <Form updateSearchField={this.updateSearchField} getLocation={this.getLocation} />
-        {this.state.show&& <><Info name={this.state.locationData.display_name}/>
-        <Map lat={this.state.locationData.lat} lon={this.state.locationData.lon} /> </>}
-        <WeatherData weatherInfo={this.state.weatherData}/>
+        <Form updateSearchField={this.updateSearchField} getLocation={this.getLocation} reloadPage={this.reloadPage} />
+        {this.state.show === true && <><Info name={this.state.locationData.display_name}/>
+        <Map lat={this.state.locationData.lat} lon={this.state.locationData.lon} /><WeatherData weatherInfo={this.state.weatherData}/> </>}
+        
         <Footer />
       </div>
     )
