@@ -7,7 +7,7 @@ export class AlertComp extends Component {
     render() {
         return (
             <div>
-                <Alert isOpen={this.props.alertDisplay} variant={'danger'} dismissible  onClose={this.props.onClose}>
+                <Alert show={this.props.alertDisplay} variant={'danger'} dismissible  onClose={this.props.onClose}>
                     {this.props.errorMessage}
                 </Alert>
                 

@@ -17,11 +17,11 @@ export class App extends Component {
     this.state = {
       searchField: '',
       locationData: '',
-      show: false,     // this flag controls when the image and the info show
+      show: false, // this flag controls when the image and the info show
       weatherData: [],
       alertDisplay: false,
       errorMessage: ''
-    }
+    };
   }
 
 
@@ -29,14 +29,16 @@ export class App extends Component {
 
 
   getLocation = async (e) => {
+    e.preventDefault();
+
     try {
       if (this.state.searchField !== '') {
-        e.preventDefault();
+
         const locationUrl = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_MAP_KEY}&q=${this.state.searchField}&format=json`;
         const locationRequest = await axios.get(locationUrl);
         this.setState({
           locationData: locationRequest.data[0],
-        })
+        });
         this.getWeather();
       } else {
         this.setState({
@@ -45,14 +47,16 @@ export class App extends Component {
           locationData: '',
           show: false,
           weatherData: []
-        })
+        });
       }
     }
     catch (error) {
+      console.log(error);
       this.setState({
         alertDisplay: true,
         errorMessage: error,
-      })
+        locationData:'',
+      });
     }
 
 
@@ -72,7 +76,7 @@ export class App extends Component {
     this.setState({
       show: true,
       weatherData: weatherRequest.data,
-    })
+    });
 
   }
 
@@ -86,7 +90,7 @@ export class App extends Component {
     this.setState({
       alertDisplay: false,
       errorMessage: '',
-    })
+    });
   }
 
 
@@ -100,7 +104,7 @@ export class App extends Component {
 
   onClose = () => {
     this.setState({ alertDisplay: false,
-    errorMessage:'', })
+      errorMessage:'', });
   }
 
 
@@ -117,9 +121,9 @@ export class App extends Component {
             <WeatherData weatherInfo={this.state.weatherData} />
           </>
           :
-          <>
-            <Alert alertDisplay={this.state.alertDisplay} errorMessage={this.state.errorMessage} onClose={this.onClose} />
-          </>
+
+          <Alert alertDisplay={this.state.alertDisplay} errorMessage={this.state.errorMessage} onClose={this.onClose} />
+
         }
 
 
@@ -128,8 +132,8 @@ export class App extends Component {
 
         <Footer />
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
