@@ -54,8 +54,9 @@ export class App extends Component {
       console.log(error);
       this.setState({
         alertDisplay: true,
-        errorMessage: error,
+        errorMessage: error.message ,
         locationData:'',
+        show:false,
       });
     }
 
@@ -63,6 +64,9 @@ export class App extends Component {
 
   }
 
+  // notes
+  // 1. always keep the "prevent default outside the try and catch ".
+  // 2. if you want to display error messages ... use error.message
 
 
 
@@ -85,13 +89,8 @@ export class App extends Component {
 
 
 
-  reloadPage = (event) => {
-    window.location.reload();
-    this.setState({
-      alertDisplay: false,
-      errorMessage: '',
-    });
-  }
+
+
 
 
   updateSearchField = (e) => {
@@ -113,7 +112,7 @@ export class App extends Component {
       <div>
         <Header />
         <br />
-        <Form updateSearchField={this.updateSearchField} getLocation={this.getLocation} reloadPage={this.reloadPage} />
+        <Form updateSearchField={this.updateSearchField} getLocation={this.getLocation} />
         {this.state.show === true ?
           <>
             <Info name={this.state.locationData.display_name} />

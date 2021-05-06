@@ -4,19 +4,19 @@ import { Card, CardDeck } from 'react-bootstrap';
 export class WeatherData extends Component {
   render() {
     return (this.props.weatherInfo.map((data, index) => {
-      return <CardDeck>
+      return <div><CardDeck>
         <Card key={index} bg={'primary'} text={'light'} border={'danger'} >
           <Card.Body>
-            <Card.Title><h1>Weather Summary 🌧️ ☀️ 🌈</h1></Card.Title>
+            <Card.Title>Weather Summary 🌧️ ☀️ 🌈</Card.Title>
             <Card.Text>
-              <h4> Date recorded: {data.date}</h4>
-              <h2>Weather Description 🌡️ :  {data.description}.</h2>
+               Date recorded: {data.date}
+              Weather Description 🌡️ :  {data.description}.
             </Card.Text>
           </Card.Body>
         </Card>
 
       </CardDeck>;
-
+      </div>;
     })
 
     );

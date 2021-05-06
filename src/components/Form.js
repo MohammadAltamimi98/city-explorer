@@ -14,13 +14,13 @@ export class Form extends React.Component {
             <FormExplorer.Label>City Name </FormExplorer.Label>
             <FormExplorer.Control onChange={this.props.updateSearchField} type="text" placeholder="Enter City Name" />
             <FormExplorer.Text className="text-muted">
-                            make sure that your city name is written correctly &  don't send an empty string.
+                           Make sure that your city name is written correctly &  don't send an empty string.
             </FormExplorer.Text>
           </FormExplorer.Group>
 
 
           <Button variant="primary" type="submit"> Explore  </Button> <p>   </p>
-          <Button onClick={this.props.reloadPage}variant="primary" type="click"> Refresh  </Button>
+
         </FormExplorer>
 
       </div>
