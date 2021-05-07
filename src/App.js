@@ -84,7 +84,7 @@ export class App extends Component {
   }
 
   // getMovie= async () =>{
-  //   movieUrl=``;
+  //   movieUrl=`https://city-explorer-api-dh.herokuapp.com/movie?cityName=${amman}`;
 
   //   const movieRequest=await axios.get(movieUrl);
   // this.setState({
