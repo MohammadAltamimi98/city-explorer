@@ -8,6 +8,7 @@ import Info from './components/Info';
 import Map from './components/Map';
 import WeatherData from './components/WeatherData';
 import Alert from './components/AlertComp';
+import MovieData from './components/MovieData';
 
 
 
@@ -20,7 +21,8 @@ export class App extends Component {
       show: false, // this flag controls when the image and the info show
       weatherData: [],
       alertDisplay: false,
-      errorMessage: ''
+      errorMessage: '',
+      movieData:[]
     };
   }
 
@@ -40,6 +42,7 @@ export class App extends Component {
           locationData: locationRequest.data[0],
         });
         this.getWeather();
+        this.getMovie();
       } else {
         this.setState({
           errorMessage: 'Please enter a valid city name.',
@@ -83,14 +86,17 @@ export class App extends Component {
 
   }
 
-  // getMovie= async () =>{
-  //   movieUrl=`https://city-explorer-api-dh.herokuapp.com/movie?cityName=${amman}`;
+  getMovie= async () =>{
+    const movieUrl=`${process.env.REACT_APP_SERVER}/movie?query=${this.state.searchField}`;
 
-  //   const movieRequest=await axios.get(movieUrl);
-  // this.setState({
+    const movieRequest=await axios.get(movieUrl);
 
-  // })
-  // }
+    console.log(movieRequest);
+    this.setState({
+      movieData:movieRequest.data,
+
+    });
+  }
 
 
 
@@ -126,6 +132,7 @@ export class App extends Component {
             <Info name={this.state.locationData.display_name} />
             <Map lat={this.state.locationData.lat} lon={this.state.locationData.lon} />
             <WeatherData weatherInfo={this.state.weatherData} />
+            <MovieData movieInfo={this.state.movieData}/>
           </>
           :
 
