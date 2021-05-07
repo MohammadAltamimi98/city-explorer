@@ -103,7 +103,18 @@ create the GeoSearch - map Feature
 
 - Actual time needed to complete: 3 hours: 20 mins
 
-##4. 
+<p>&nbsp;</p>
+
+## 4. Custom Servers with Node and Express
+---
+
+- Estimate of time needed to complete: 8 hours
+
+- Start time: 2:30
+
+- Finish time:9:15
+
+- Actual time needed to complete: 7 hours: 15 mins
 
 
 
