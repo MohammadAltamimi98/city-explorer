@@ -78,7 +78,7 @@ export class App extends Component {
 
     this.setState({
       weatherData: weatherRequest.data,
-      show: true,
+      show: true
     });
 
   }
