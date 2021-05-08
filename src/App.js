@@ -130,6 +130,7 @@ export class App extends Component {
         {this.state.show === true ?
           <>
             <Info name={this.state.locationData.display_name} />
+            <br/>
             <Map lat={this.state.locationData.lat} lon={this.state.locationData.lon} />
             <WeatherData weatherInfo={this.state.weatherData} />
             <MovieData movieInfo={this.state.movieData}/>
