@@ -116,6 +116,19 @@ create the GeoSearch - map Feature
 
 - Actual time needed to complete: 7 hours: 15 mins
 
+<p>&nbsp;</p>
+
+## 5. added Cache
+---
+
+- Estimate of time needed to complete: 6 hours
+
+- Start time: 2:30
+
+- Finish time:8:32
+
+- Actual time needed to complete: 2 hours :35 mins
+
 
 
 
