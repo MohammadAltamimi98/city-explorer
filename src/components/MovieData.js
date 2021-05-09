@@ -9,9 +9,16 @@ export class MovieData extends Component {
 
 
       this.props.movieInfo.map((data, index) => {
-        return <>
-          <Card key={index} style={{ width: '18rem' }}>
+        return <div key={index}>
+
+          <Card style={{ width: '18rem' }}>
+
+
+            {data.image !== 'http://image.tmdb.org/t/p/w342null' &&
             <Card.Img variant="top" width={50} height={250} src={data.image} />
+            }
+            {/* //this will remove the error with regards to the null images  */}
+
             <Card.Body>
               <Card.Title>{data.title}</Card.Title>
               <Card.Text>
@@ -19,9 +26,9 @@ export class MovieData extends Component {
               Rating: {data.rating}
               </Card.Text>
             </Card.Body>
-          </Card>;
+          </Card>
           <br/>
-        </>;
+        </div>;
       }
 
 
